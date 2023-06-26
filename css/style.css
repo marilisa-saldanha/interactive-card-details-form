@@ -190,9 +190,14 @@ body {
   letter-spacing: .125rem;
   border-radius: .5rem;
   border: none;
+  outline: none;
   cursor: pointer;
   transition: all .3s ease-in-out;
   margin: 1rem 0;
+}
+
+.container .formSection #form #btnConfirm:hover {
+  background: linear-gradient(to right, var(--light-violet), var(--violet));
 }
 
 label {
@@ -267,6 +272,10 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   transition: all .3s ease-in-out;
   margin: 1.5rem 0;
+}
+
+.container .formSection .thankYou #btnContinue:hover {
+  background: linear-gradient(to right, var(--light-violet), var(--violet));
 }
 
 footer {

@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL]()
-- [Live Site URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/interactive-card-details-form-using-html-css-flexbox-and-javascript-xkcob6mAVf)
+- [Live Site URL](https://marilisa-saldanha.github.io/interactive-card-details-form/)
 
 ## My process
 
