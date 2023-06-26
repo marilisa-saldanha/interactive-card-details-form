@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./src/script.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="container">
+
+      <picture>
+        <source media="(min-width: 1024px)" srcset="./images/bg-main-desktop.png">
+        <img src="./images/bg-main-mobile.png" alt="bg-main-mobile">
+      </picture>
+
+      <div class="cardSection">
+        <div class="cards">
+          <div class="frontCard">
+            <img src="./images/card-logo.svg" alt="card-logo" class="cardLogo">
+            <div class="cardData">
+              <img src="./images/bg-card-front.png" alt="bg-card-front">
+              <h1 id="number">0000 0000 0000 0000</h1>
+              <div class="cardInfo">
+                <span id="name">Jane Appleseed</span>
+                <span id="date">
+                  <span id="month">00</span>
+                  /
+                  <span id="year">00</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="backCard">
+            <img src="./images/bg-card-back.png" alt="bg-card-back">
+            <span id="cvc">000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="formSection">
+        <form id="form">
+          <label for="cardName">Cardholder Name</label>
+          <input type="text" class="required" name="cardName" id="cardName" placeholder="e.g. Jane Appleseed">
+          <small class="infoError"></small>
+
+          <label for="cardNumber">Card Number</label>
+          <input type="number"
+          class="required"
+          name="cardNumber"
+          id="cardNumber"
+          placeholder="e.g. 1234 5678 9123 0000"
+          oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          minlength="16"
+          maxlength="16">
+          <small class="infoError"></small>
+      
+          <div class="data">
+            <div class="monthYear">
+              <label for="mm">Exp. Date (MM/YY)</label>
+              <div class="mmYY">
+                <input type="number"
+                class="required"
+                name="mm"
+                id="mm"
+                placeholder="MM"
+                oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                minlength="2"
+                maxlength="2">
+                <input type="number"
+                class="required"
+                name="yy"
+                id="yy"
+                placeholder="YY"
+                oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                minlength="2"
+                maxlength="2">
+              </div>
+              <small class="infoError"></small>
+            </div>
+            <div class="code">
+              <label for="cardCvc">CVC</label>
+              <input type="number"
+              class="required"
+              name="cardCvc"
+              id="cardCvc"
+              placeholder="e.g. 123"
+              oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              minlength="3"
+              maxlength="3">
+              <small class="infoError"></small>
+            </div>
+          </div>
+          <button type="submit" id="btnConfirm">Confirm</button>
+        </form>
+        <div class="thankYou hidden">
+          <img src="./images/icon-complete.svg" alt="icon-complete">
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button type="submit" id="btnContinue">Continue</button>
+        </div>
+      </div>      
+    </div>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/marilisa-saldanha" target="_blank">Marilisa Saldanha</a>.
+    </div>
+  </footer>
+</body>
+</html>
